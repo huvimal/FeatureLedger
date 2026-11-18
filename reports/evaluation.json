@@ -1,0 +1,74 @@
+{
+  "data_kind": "seeded synthetic leakage stress test; not customer or business accuracy",
+  "seed": 42,
+  "as_of": "2025-05-15T00:00:00+00:00",
+  "train_cutoff": "2025-03-14T00:00:00+00:00",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "protocol": "Same fixed logistic setup in both arms. Train labels must be available by cutoff. Future prediction test. No hyperparameter tuning. Leaky arm intentionally ignores feature availability.",
+  "methods": {
+    "safe": {
+      "snapshot_id": "c1894b058d9a9cab93d8bc8c8e7542202e35b09096b3d9460650c8f3c9e0a6ec",
+      "feature_rows": 5120,
+      "missing_feature_rows": 61,
+      "availability_violations": 0,
+      "train_rows": 1600,
+      "test_rows": 960,
+      "label_gap_rows": 0,
+      "test": {
+        "rows": 960,
+        "accuracy": 0.5822916666666667,
+        "f1": 0.6140519730510106,
+        "log_loss": 0.6714667672683025
+      },
+      "majority_baseline": {
+        "rows": 960,
+        "accuracy": 0.5177083333333333,
+        "f1": 0.6822237474262183,
+        "log_loss": 13.326211225703556
+      },
+      "reconstruction": {
+        "snapshot_id": "c1894b058d9a9cab93d8bc8c8e7542202e35b09096b3d9460650c8f3c9e0a6ec",
+        "logical_rows_match": true,
+        "feature_rows": 5120
+      },
+      "model_sha256": "4cb2ce6990bd4847c830c90da4cff009c03c0d4e6f5aed4ee8b195fdedd756f6"
+    },
+    "event_only": {
+      "snapshot_id": "1016b2fd44df2372c99d62152af7d58ba5f1825f6e9a33caefe5098ed5a970ac",
+      "feature_rows": 5120,
+      "missing_feature_rows": 0,
+      "availability_violations": 3051,
+      "train_rows": 1600,
+      "test_rows": 960,
+      "label_gap_rows": 0,
+      "test": {
+        "rows": 960,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "log_loss": 0.03504943620095561
+      },
+      "majority_baseline": {
+        "rows": 960,
+        "accuracy": 0.5177083333333333,
+        "f1": 0.6822237474262183,
+        "log_loss": 13.326211225703556
+      },
+      "reconstruction": {
+        "snapshot_id": "1016b2fd44df2372c99d62152af7d58ba5f1825f6e9a33caefe5098ed5a970ac",
+        "logical_rows_match": true,
+        "feature_rows": 5120
+      },
+      "model_sha256": "7ff5fc0dc77d12f0ffb122f809429835e5d8edcc6a54f0afc73cfd3a8602a26b"
+    }
+  },
+  "late_append_old_snapshot_unchanged": true,
+  "seconds": 47.015177999972366,
+  "source_sha256": {
+    "ledger.py": "dc932fded7cbc8072e9faad762dc8c3af6ddf24401a03de68eb4cdd3c1f4b4bf",
+    "generate.py": "1f7177de6f2b677edd16c684a6dcd6c8503106cc0c1d8ed8132c2a80b81dc2bf",
+    "evaluate.py": "08705372ae08ec054bc9e3b6130a8cfe20a830e80669cb5dda5e024ba96ab905"
+  },
+  "code_and_dependencies_are_part_of_snapshot_identity": true
+}
